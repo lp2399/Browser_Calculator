@@ -1,0 +1,179 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root{
+    --light-mode-background: rgb(244, 242, 247);
+    --light-mode-foreground-primary:rgb(255, 255, 255);
+    --light-mode-foreground-secondary:rgb(249, 249, 249);
+    --light-mode-primary-text-color:rgb(39, 36, 44);
+    --light-mode-secondary-text-color:rgb(138, 138, 142);
+    --dark-mode-background:rgb(24, 23, 25);
+    --dark-mode-foreground-primary:rgb(39, 36, 44);
+    --dark-mode-foreground-secondary:rgb(75, 75, 75);
+    --dark-mode-primary-text-color:rgb(255, 255, 255);
+    --dark-mode-secondary-text-color:rgb(243, 243, 249);
+}
+body{
+    background-color: var(--light-mode-background);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.container{
+    position: absolute;
+    z-index:0;
+    top:25vh;
+    margin-right: auto;
+    margin-left: auto;
+    width: 320px;
+    height: fit-content;
+    text-align: center;
+    left: 0;
+    right: 0;
+    background:transparent;
+
+}
+#result{
+    display: grid;
+    grid-template-columns: 1fr 3fr ;
+    margin-right: auto;
+    margin-left: auto;
+    height: 4.5rem;
+    width: 100%;
+    color: var(--light-mode-primary-text-color);
+    text-overflow: ellipsis;
+}
+#change-mode{
+    background-color: var(--light-mode-foreground-secondary);
+    border-top: solid transparent 1px;
+    border-radius: 1rem 0px 0px 0px;
+    font-size:2.5rem;
+    min-width: 0; 
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#history-value{
+    text-align: right;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    display: block;
+    color: rgb(138, 138, 142);
+}
+#output{
+     min-width: 0;
+    background-color: var(--light-mode-foreground-primary);
+    border-top: solid transparent 1px;
+    border-radius: 0px 1rem 0px 0px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+#current-value{
+    font-size: 2rem;
+    text-align: right;
+    margin-right: 1rem;
+    display: block;
+    height: fit-content;
+
+}
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows:  1fr 1fr 1fr 1fr;            
+    margin-right: auto;
+    margin-left: auto;  
+    left: 0;
+    right: 0;
+    border-radius: 0px 0px 1rem 1rem; 
+    background: linear-gradient(rgb(251, 251, 251),rgb(234, 234, 234));
+  }
+  button {    
+    text-align: center;
+    font-size: inherit;
+    height: 4.5rem;
+    border: solid rgba(197, 197, 197, 0.1) .08rem ;
+    outline: none;
+    color: var(--light-mode-secondary-text-color);
+    cursor: pointer;
+    background-color: transparent;
+  }
+button:hover{
+    outline: 0;
+    border: solid #484848 .08rem ;
+}
+.button-focus{
+    outline: 0;
+    border: solid whitesmoke .08rem ;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    font-weight: lighter;
+    color: rgb(138, 138, 142,.5);
+}
+#zero{
+    border-radius: 0px 0px 0px 1rem;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#equals{
+    border-radius: 0px 0px 1rem 0px;
+}
+#clear{
+     grid-column-start: 1;
+    grid-column-end: 3;
+}
+/* source https://proto.io/freebies/onoff/ */
+.onoffswitch {
+    position: relative; width: 60px;
+   margin: 1.5rem auto 0 auto;
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "";
+    padding-left: 10px;
+    background-color: #4b4b4b; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 10px; margin: 5px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 36px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}
+
+
+

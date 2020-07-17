@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+   <!--  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans+JP' rel='stylesheet' type='text/css'> -->
+    <title>Calculator App</title>
+  </head>
+  <body class="light-mode">
+    <div class="container">
+            <div id="result">
+              <!-- source  https://proto.io/freebies/onoff/ -->
+              <div id="change-mode" >
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0">
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+             </div> 
+            <div id="output">
+                <p id="history-value"></p>
+                <p id="current-value" ></p>
+            </div>
+        </div>
+        <div id="keyboard">
+            <div class="grid-container ">
+                <button  id="clear">C</button>
+                <button class="operator" id="modulus" >%</button>
+                <button class="operator" id="addition">&#43;</button> 
+                <button class="number" id="seven">7</button>
+                <button class="number" id="eight">8</button>
+                <button class="number" id="nine">9</button>
+                <button class="operator" id="subtraction">&#8722;</button>
+                <button class="number" id="four">4</button>
+                <button class="number" id="five">5</button>
+                <button class="number" id="six">6</button>
+                <button class="operator" id="multiplication">&#215;</button>
+                <button class="number" id="one">1</button>
+                <button class="number" id="two">2</button>
+                <button class="number" id="three">3</button>
+                <button class="operator" id="division">&#247;</button>
+                <button class="number" id="zero">0</button>
+                <button class="number" id="decimal">.</button>
+                <button  id="equals">&#61;</button>
+                  
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script> 
+  </body>
+  </html>
