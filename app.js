@@ -155,7 +155,7 @@ function changeTheme(){
     changeModeDiv = document.querySelector('#change-mode'),
     gridContainer = document.querySelector('.grid-container');
     toggler.addEventListener('click',()=>{
-        toggler.checked===true; // dont know this worked durinf testing
+        toggler.checked = true; 
         if(toggler.checked===true){
             setTimeout(()=>{
                 historyValue.style.color = 'var( --dark-mode-secondary-text-color)';
