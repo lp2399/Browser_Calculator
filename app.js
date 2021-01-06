@@ -149,13 +149,13 @@ function clickButtonEffect(){
     buttons[i].classList.remove('button-focus');
     })}}    
 function changeTheme(){
-        const toggler = document.querySelector('#myonoffswitch');
+    const toggler = document.querySelector('.onoffswitch'); // i have no idea how this broke
     body = document.querySelector('body'),
     ouput = document.querySelector('#output'),
     changeModeDiv = document.querySelector('#change-mode'),
     gridContainer = document.querySelector('.grid-container');
     toggler.addEventListener('click',()=>{
-        toggler.checked===true;
+        toggler.checked===true; // dont know this worked durinf testing
         if(toggler.checked===true){
             setTimeout(()=>{
                 historyValue.style.color = 'var( --dark-mode-secondary-text-color)';
